@@ -1,11 +1,10 @@
-// src/pages/ProductPage.js
 import React from "react";
-import ProductDetails from "../components/ProductDetails";
+import ProductDetails from "../components/productDetails";
 
-const ProductPage = () => {
+const ProductPage = ({ setCartItem, cartItems }) => {
   return (
     <div>
-      <ProductDetails />
+      <ProductDetails setCartItem={setCartItem} cartItem={cartItems} />
     </div>
   );
 };

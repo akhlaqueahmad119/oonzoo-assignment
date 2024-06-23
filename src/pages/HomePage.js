@@ -1,12 +1,11 @@
-// src/pages/HomePage.js
 import React from "react";
 import ProductList from "../components/ProductList";
 
-const HomePage = () => {
+const HomePage = ({ setCartItem }) => {
   return (
     <div>
       <h1>Product Listing</h1>
-      <ProductList />
+      <ProductList setCartItem={setCartItem} />
     </div>
   );
 };

@@ -1,22 +1,27 @@
-// src/features/user/userSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isLoggedIn: false,
+  user: {
+    name: "Akhlaque",
+    email: "akhlaqueahmad119@gmail.com",
+    phone: "+91 7987557295",
+    address: "New Delhi",
+    userId: 1,
+  },
+  isLogin: false,
 };
 
-const userSlice = createSlice({
+export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    logIn: (state) => {
-      state.isLoggedIn = true;
-    },
-    logOut: (state) => {
-      state.isLoggedIn = false;
+    loginAction: (state, action) => {
+      state.user = action.payload.user;
+      state.isLogin = true;
     },
   },
 });
 
-export const { logIn, logOut } = userSlice.actions;
+export const { loginAction, updateUserAction } = userSlice.actions;
+
 export default userSlice.reducer;

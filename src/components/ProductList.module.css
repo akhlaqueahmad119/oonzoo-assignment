@@ -1,0 +1,36 @@
+.productListContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .productList {
+    gap: 2rem;
+    max-width: 100%;
+  }
+}
+
+.productItem {
+  flex: 0 0 30%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .productItem {
+    flex: 1 1 calc(50% - 32px);
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .productItem {
+    flex: 1 1 calc(100% - 32px);
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=ProductList.module.css.map */
