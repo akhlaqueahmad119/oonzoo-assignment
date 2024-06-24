@@ -4,7 +4,7 @@ function CartCard({ productName, productId, quantity, price, imgUrl }) {
   return (
     <div className={styles.cartCard}>
       <div className={styles.cartCard_productImage}>
-        {imgUrl && <img src={imgUrl} />}
+        {imgUrl && <img alt="img" src={imgUrl} />}
       </div>
       <div className={styles.cartCard_productContent}>
         <div className={styles.cartCard_productName}>

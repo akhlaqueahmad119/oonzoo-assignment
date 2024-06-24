@@ -46,7 +46,7 @@ const Cart = ({ cartItems }) => {
               {uniqueProducts?.map((cart, index) => (
                 <CartCard
                   key={cart.id}
-                  productName={"Product Name: " + "  " + cart.category}
+                  productName={`Product Name:  ${cart.category}`}
                   quantity={3}
                   price={cart.price}
                   imgUrl={cart.image}
